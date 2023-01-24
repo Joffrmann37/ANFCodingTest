@@ -15,6 +15,14 @@
 		3E727EDF2672708B006C11AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */; };
 		3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */; };
 		3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */; };
+		B40251E1298041A400C9353D /* ANFExploreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40251E0298041A400C9353D /* ANFExploreRepository.swift */; };
+		B40251E42980421000C9353D /* GetExploreUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40251E32980421000C9353D /* GetExploreUseCase.swift */; };
+		B40251E8298043D600C9353D /* ANFExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40251E7298043D600C9353D /* ANFExploreViewModel.swift */; };
+		B40251ED298046FA00C9353D /* ANFExploreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40251EC298046FA00C9353D /* ANFExploreDetailViewController.swift */; };
+		B40251EF29804AF600C9353D /* ANFExploreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40251EE29804AF600C9353D /* ANFExploreModel.swift */; };
+		B40251F129804D7700C9353D /* ExploreContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40251F029804D7700C9353D /* ExploreContentCell.swift */; };
+		B40251F429806F4000C9353D /* ANFExploreModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40251F329806F4000C9353D /* ANFExploreModelTests.swift */; };
+		B40251F62980743500C9353D /* ANFExploreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40251F52980743500C9353D /* ANFExploreViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,14 @@
 		3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewControllerTests.swift; sourceTree = "<group>"; };
 		3E727EEB2672708B006C11AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewController.swift; sourceTree = "<group>"; };
+		B40251E0298041A400C9353D /* ANFExploreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreRepository.swift; sourceTree = "<group>"; };
+		B40251E32980421000C9353D /* GetExploreUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExploreUseCase.swift; sourceTree = "<group>"; };
+		B40251E7298043D600C9353D /* ANFExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreViewModel.swift; sourceTree = "<group>"; };
+		B40251EC298046FA00C9353D /* ANFExploreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreDetailViewController.swift; sourceTree = "<group>"; };
+		B40251EE29804AF600C9353D /* ANFExploreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreModel.swift; sourceTree = "<group>"; };
+		B40251F029804D7700C9353D /* ExploreContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreContentCell.swift; sourceTree = "<group>"; };
+		B40251F329806F4000C9353D /* ANFExploreModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreModelTests.swift; sourceTree = "<group>"; };
+		B40251F52980743500C9353D /* ANFExploreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +97,16 @@
 		3E727ED126727088006C11AC /* ANF Code Test */ = {
 			isa = PBXGroup;
 			children = (
-				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
+				B40251F229804D7D00C9353D /* Cells */,
+				B40251E52980428A00C9353D /* domain */,
+				B40251DE2980413E00C9353D /* data */,
+				B40251E9298046BE00C9353D /* View Controllers */,
 				3E727ED226727088006C11AC /* AppDelegate.swift */,
 				3E727ED426727088006C11AC /* SceneDelegate.swift */,
 				3E727ED826727088006C11AC /* Main.storyboard */,
 				3E727EDB2672708B006C11AC /* Assets.xcassets */,
 				3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */,
 				3E727EE02672708B006C11AC /* Info.plist */,
-				3E4AB9392676D86100C79456 /* exploreData.json */,
 			);
 			path = "ANF Code Test";
 			sourceTree = "<group>";
@@ -97,9 +115,79 @@
 			isa = PBXGroup;
 			children = (
 				3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */,
+				3E4AB9392676D86100C79456 /* exploreData.json */,
 				3E727EEB2672708B006C11AC /* Info.plist */,
+				B40251F329806F4000C9353D /* ANFExploreModelTests.swift */,
+				B40251F52980743500C9353D /* ANFExploreViewModelTests.swift */,
 			);
 			path = "ANF Code TestTests";
+			sourceTree = "<group>";
+		};
+		B40251DE2980413E00C9353D /* data */ = {
+			isa = PBXGroup;
+			children = (
+				B40251E0298041A400C9353D /* ANFExploreRepository.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		B40251E2298041ED00C9353D /* useCases */ = {
+			isa = PBXGroup;
+			children = (
+				B40251E32980421000C9353D /* GetExploreUseCase.swift */,
+			);
+			path = useCases;
+			sourceTree = "<group>";
+		};
+		B40251E52980428A00C9353D /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				B40251E6298043A600C9353D /* viewModels */,
+				B40251E2298041ED00C9353D /* useCases */,
+				B40251EE29804AF600C9353D /* ANFExploreModel.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		B40251E6298043A600C9353D /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B40251E7298043D600C9353D /* ANFExploreViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		B40251E9298046BE00C9353D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B40251EB298046E100C9353D /* Detail */,
+				B40251EA298046D400C9353D /* List */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B40251EA298046D400C9353D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		B40251EB298046E100C9353D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B40251EC298046FA00C9353D /* ANFExploreDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B40251F229804D7D00C9353D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B40251F029804D7700C9353D /* ExploreContentCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40251ED298046FA00C9353D /* ANFExploreDetailViewController.swift in Sources */,
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
+				B40251E42980421000C9353D /* GetExploreUseCase.swift in Sources */,
+				B40251E8298043D600C9353D /* ANFExploreViewModel.swift in Sources */,
+				B40251E1298041A400C9353D /* ANFExploreRepository.swift in Sources */,
+				B40251F129804D7700C9353D /* ExploreContentCell.swift in Sources */,
+				B40251EF29804AF600C9353D /* ANFExploreModel.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
 			);
@@ -214,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */,
+				B40251F62980743500C9353D /* ANFExploreViewModelTests.swift in Sources */,
+				B40251F429806F4000C9353D /* ANFExploreModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

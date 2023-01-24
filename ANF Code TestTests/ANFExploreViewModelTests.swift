@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import Foundation
+@testable import ANF_Code_Test
 
 class ANFExploreViewModelTests: XCTestCase {
 
@@ -32,4 +34,14 @@ class ANFExploreViewModelTests: XCTestCase {
         }
     }
 
+    func testGetExploreData() {
+        let vm = ANFExploreViewModel(getExploreUseCase: GetExplore(exploreRepository: ANFExploreRepository()))
+        vm.getExploreData { models in
+            guard let models = models else {
+                return
+            }
+
+            XCTAssertTrue(models.count > 0)
+        }
+    }
 }
